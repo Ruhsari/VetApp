@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane fx:id="tabPane" prefHeight="483.0" prefWidth="559.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.AuthController">
+    <tabs>
+        <!-- Вкладка входа -->
+        <Tab fx:id="loginTab" style="-fx-background-color: #ECF1F8;" text="Вход">
+            <content>
+                <VBox alignment="CENTER" prefHeight="450.0" prefWidth="559.0" spacing="10" style="-fx-background-color: #ECF1F8;">
+                    <Text fill="#0a1c40" strokeType="OUTSIDE" strokeWidth="0.0" text="Авторизация">
+                        <font>
+                            <Font name="Montserrat SemiBold" size="20.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="loginUsernameField" prefHeight="40.0" prefWidth="300.0" promptText="Имя пользователя" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
+                    <PasswordField fx:id="loginPasswordField" prefHeight="40.0" prefWidth="300.0" promptText="Пароль" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
+                    <Button fx:id="loginButton" onAction="#handleLogin" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Войти" textFill="WHITE">
+                        <font>
+                            <Font name="Montserrat Medium" size="12.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="specialistLoginButton" onAction="#handleSpecialistLogin" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Вход для врачей" textFill="WHITE">
+                        <font>
+                            <Font name="Montserrat Medium" size="12.0" />
+                        </font>
+                    </Button>
+                </VBox>
+            </content>
+        </Tab>
+        <!-- Вкладка регистрации -->
+        <Tab fx:id="registerTab" style="-fx-background-color: #ECF1F8;" text="Регистрация">
+            <content>
+                <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #ECF1F8;">
+                    <Text fill="#0a1c40" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация">
+                        <font>
+                            <Font name="Montserrat SemiBold" size="20.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="registerUsernameField" prefHeight="33.0" prefWidth="300.0" promptText="Имя пользователя" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 20;" />
+                    <PasswordField fx:id="registerPasswordField" prefHeight="33.0" prefWidth="398.0" promptText="Пароль" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 20;" />
+                    <TextField fx:id="fullNameField" prefHeight="34.0" prefWidth="398.0" promptText="Полное имя" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 20;" />
+                    <TextField fx:id="phoneField" prefHeight="33.0" prefWidth="300.0" promptText="Телефон" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-max-width: 300;" />
+                    <TextField fx:id="addressField" prefHeight="33.0" prefWidth="300.0" promptText="Адрес" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 20;" />
+                    <Button fx:id="registerButton" onAction="#handleRegister" prefHeight="40.0" prefWidth="184.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 30;" text="Зарегистрироваться" textFill="WHITE">
+                        <font>
+                            <Font name="Montserrat Medium" size="12.0" />
+                        </font>
+                    </Button>
+                </VBox>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
