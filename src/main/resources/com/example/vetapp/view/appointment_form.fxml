@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="388.0" spacing="10" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.AppointmentFormController">
+<VBox prefHeight="642.0" prefWidth="388.0" spacing="10" style="-fx-padding: 20; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.AppointmentFormController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
@@ -18,17 +18,17 @@
          <Font name="Montserrat Regular" size="12.0" />
       </font></Label>
     <Label styleClass="label-normal" text="Имя питомца:" />
-    <TextField fx:id="petNameField" prefHeight="35.0" prefWidth="348.0" promptText="Введите имя питомца" style="-fx-background-radius: 20; -fx-background-color: #FFFFFF;" />
+    <TextField fx:id="petNameField" prefHeight="35.0" prefWidth="348.0" promptText="Введите имя питомца" style="-fx-background-radius: 10; -fx-background-color: #E5E5E5;" />
     <Label styleClass="label-normal" text="Тип питомца:" />
-    <TextField fx:id="petTypeField" prefHeight="36.0" prefWidth="348.0" promptText="Например, собака" style="-fx-background-radius: 20; -fx-background-color: #FFFFFF;" />
+    <TextField fx:id="petTypeField" prefHeight="36.0" prefWidth="348.0" promptText="Например, собака" style="-fx-background-radius: 10; -fx-background-color: #E5E5E5;" />
     <Label styleClass="label-normal" text="Причина обращения:" />
-    <TextField fx:id="reasonField" prefHeight="35.0" prefWidth="348.0" promptText="Опишите причину" style="-fx-background-radius: 20; -fx-background-color: #FFFFFF;" />
+    <TextField fx:id="reasonField" prefHeight="35.0" prefWidth="348.0" promptText="Опишите причину" style="-fx-background-radius: 10; -fx-background-color: #E5E5E5;" />
     <Label styleClass="label-normal" text="Специалист:" />
-    <ComboBox fx:id="specialistComboBox" onAction="#handleSpecialistSelection" prefHeight="35.0" prefWidth="168.0" promptText="Выберите специалиста" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #C5D9FF;" />
+    <ComboBox fx:id="specialistComboBox" onAction="#handleSpecialistSelection" prefHeight="35.0" prefWidth="168.0" promptText="Выберите специалиста" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FCC82B;" />
     <Label styleClass="label-normal" text="Дата:" />
-    <ComboBox fx:id="dateComboBox" onAction="#handleDateSelection" prefHeight="35.0" promptText="Выберите дату" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #C5D9FF;" />
+    <ComboBox fx:id="dateComboBox" onAction="#handleDateSelection" prefHeight="35.0" promptText="Выберите дату" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FCC82B;" />
     <Label styleClass="label-normal" text="Время:" />
-    <ComboBox fx:id="timeComboBox" prefHeight="35.0" promptText="Выберите время" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #C5D9FF;" />
-    <Button onAction="#handleSubmit" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: linear-gradient(to right, #0A1C40, #516691);" styleClass="book-button" text="Подтвердить" />
-    <Button onAction="#handleCancel" prefHeight="38.0" prefWidth="85.0" style="-fx-background-color: linear-gradient(to right, #0A1C40, #516691);" styleClass="book-button" text="Отмена" />
+    <ComboBox fx:id="timeComboBox" prefHeight="35.0" promptText="Выберите время" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FCC82B;" />
+    <Button onAction="#handleSubmit" prefHeight="34.0" prefWidth="116.0" style="-fx-background-color: #FCC82B; -fx-text-fill: #0A1C40;" styleClass="book-button" text="Подтвердить" textFill="#0a1c40" />
+    <Button onAction="#handleCancel" prefHeight="34.0" prefWidth="86.0" style="-fx-background-color: #0A1C40;" styleClass="book-button" text="Отмена" />
 </VBox>

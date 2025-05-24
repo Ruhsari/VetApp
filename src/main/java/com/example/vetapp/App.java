@@ -13,7 +13,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/com/example/vetapp/view/auth.fxml"));
         primaryStage.setTitle("VetApp");
-        primaryStage.setScene(new Scene(root, 550, 450));
+        primaryStage.setScene(new Scene(root, 785, 650));
         primaryStage.show();
     }
 

@@ -5,56 +5,147 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TabPane fx:id="tabPane" prefHeight="483.0" prefWidth="559.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.AuthController">
+<TabPane fx:id="tabPane" prefHeight="651.0" prefWidth="785.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.AuthController">
     <tabs>
         <!-- Вкладка входа -->
-        <Tab fx:id="loginTab" style="-fx-background-color: #ECF1F8;" text="Вход">
+        <Tab fx:id="loginTab" style="-fx-background-color: #ECF1F8;" text="Log in">
             <content>
-                <VBox alignment="CENTER" prefHeight="450.0" prefWidth="559.0" spacing="10" style="-fx-background-color: #ECF1F8;">
-                    <Text fill="#0a1c40" strokeType="OUTSIDE" strokeWidth="0.0" text="Авторизация">
-                        <font>
-                            <Font name="Montserrat SemiBold" size="20.0" />
-                        </font>
-                    </Text>
-                    <TextField fx:id="loginUsernameField" prefHeight="40.0" prefWidth="300.0" promptText="Имя пользователя" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
-                    <PasswordField fx:id="loginPasswordField" prefHeight="40.0" prefWidth="300.0" promptText="Пароль" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
-                    <Button fx:id="loginButton" onAction="#handleLogin" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Войти" textFill="WHITE">
-                        <font>
-                            <Font name="Montserrat Medium" size="12.0" />
-                        </font>
-                    </Button>
-                    <Button fx:id="specialistLoginButton" onAction="#handleSpecialistLogin" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Вход для врачей" textFill="WHITE">
-                        <font>
-                            <Font name="Montserrat Medium" size="12.0" />
-                        </font>
-                    </Button>
-                </VBox>
+            <AnchorPane prefHeight="580.0" prefWidth="786.0" style="-fx-background-color: #FCC82B;">
+               <children>
+                       <Button fx:id="specialistLoginButton" layoutX="379.0" layoutY="363.0" onAction="#handleSpecialistLogin" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #615CA2; -fx-background-radius: 50;" text="Log in as a vet" textFill="WHITE">
+                           <font>
+                               <Font name="Montserrat Medium" size="12.0" />
+                           </font>
+                       </Button>
+                       <PasswordField fx:id="loginPasswordField" layoutX="243.0" layoutY="278.0" prefHeight="40.0" prefWidth="300.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 10;" />
+                  <Text fill="#3e3e3e" layoutX="288.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to VetApp">
+                     <font>
+                        <Font name="Montserrat SemiBold" size="20.0" />
+                     </font>
+                  </Text>
+                       <Text fill="#3e3e3e" layoutX="326.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authentication">
+                           <font>
+                               <Font name="Montserrat SemiBold" size="17.0" />
+                           </font>
+                       </Text>
+                       <TextField fx:id="loginUsernameField" layoutX="243.0" layoutY="221.0" prefHeight="40.0" prefWidth="300.0" promptText="User name" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 10;" />
+                       <Button fx:id="loginButton" layoutX="270.0" layoutY="363.0" onAction="#handleLogin" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #615CA2; -fx-background-radius: 50;" text="Log in" textFill="WHITE">
+                           <font>
+                               <Font name="Montserrat Medium" size="12.0" />
+                           </font>
+                       </Button>
+                  <ImageView fitHeight="46.0" fitWidth="50.0" layoutX="24.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="41.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="126.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="44.0" fitWidth="47.0" layoutX="97.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="47.0" layoutX="191.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="671.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="645.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="47.0" layoutX="736.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
             </content>
         </Tab>
         <!-- Вкладка регистрации -->
-        <Tab fx:id="registerTab" style="-fx-background-color: #ECF1F8;" text="Регистрация">
+        <Tab fx:id="registerTab" style="-fx-background-color: #ECF1F8;" text="Registration">
             <content>
-                <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #ECF1F8;">
-                    <Text fill="#0a1c40" strokeType="OUTSIDE" strokeWidth="0.0" text="Регистрация">
-                        <font>
-                            <Font name="Montserrat SemiBold" size="20.0" />
-                        </font>
-                    </Text>
-                    <TextField fx:id="registerUsernameField" prefHeight="33.0" prefWidth="300.0" promptText="Имя пользователя" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 20;" />
-                    <PasswordField fx:id="registerPasswordField" prefHeight="33.0" prefWidth="398.0" promptText="Пароль" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 20;" />
-                    <TextField fx:id="fullNameField" prefHeight="34.0" prefWidth="398.0" promptText="Полное имя" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 20;" />
-                    <TextField fx:id="phoneField" prefHeight="33.0" prefWidth="300.0" promptText="Телефон" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-max-width: 300;" />
-                    <TextField fx:id="addressField" prefHeight="33.0" prefWidth="300.0" promptText="Адрес" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 20;" />
-                    <Button fx:id="registerButton" onAction="#handleRegister" prefHeight="40.0" prefWidth="184.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 30;" text="Зарегистрироваться" textFill="WHITE">
-                        <font>
-                            <Font name="Montserrat Medium" size="12.0" />
-                        </font>
-                    </Button>
-                </VBox>
+            <AnchorPane style="-fx-background-color: #FCC82B;">
+               <children>
+                       <Text fill="#3e3e3e" layoutX="336.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration">
+                           <font>
+                               <Font name="Montserrat SemiBold" size="18.0" />
+                           </font>
+                       </Text>
+                       <TextField fx:id="registerUsernameField" layoutX="243.0" layoutY="166.0" prefHeight="33.0" prefWidth="300.0" promptText="User name" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 10;" />
+                       <PasswordField fx:id="registerPasswordField" layoutX="243.0" layoutY="260.0" prefHeight="33.0" prefWidth="398.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 10;" />
+                       <TextField fx:id="fullNameField" layoutX="243.0" layoutY="213.0" prefHeight="34.0" prefWidth="398.0" promptText="Full name" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 10;" />
+                       <TextField fx:id="phoneField" layoutX="243.0" layoutY="306.0" prefHeight="33.0" prefWidth="300.0" promptText="Phone number" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-max-width: 300;" />
+                       <TextField fx:id="addressField" layoutX="243.0" layoutY="351.0" prefHeight="33.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 10;" />
+                       <Button fx:id="registerButton" layoutX="301.0" layoutY="430.0" onAction="#handleRegister" prefHeight="40.0" prefWidth="184.0" style="-fx-background-color: #615CA2; -fx-background-radius: 30;" text="Sign in" textFill="WHITE">
+                           <font>
+                               <Font name="Montserrat Medium" size="12.0" />
+                           </font>
+                       </Button>
+                  <ImageView fitHeight="46.0" fitWidth="50.0" layoutX="24.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="125.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="41.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="44.0" fitWidth="47.0" layoutX="98.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="47.0" layoutX="191.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="671.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="645.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="47.0" layoutX="734.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 30;">
+                     <image>
+                        <Image url="@../assets/лапки.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
             </content>
         </Tab>
     </tabs>
