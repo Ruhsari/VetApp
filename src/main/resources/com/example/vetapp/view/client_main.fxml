@@ -7,8 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.Region?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
@@ -19,48 +17,53 @@
 
     <!-- Левая часть: боковое меню -->
     <left>
-        <VBox minWidth="159.0" prefHeight="490.0" prefWidth="125.0" spacing="10" style="-fx-padding: 20; -fx-background-color: #EDE9F7; -fx-min-width: 100px;">
-            <AnchorPane maxWidth="103.0" prefHeight="392.0" prefWidth="103.0" style="-fx-background-radius: 20; -fx-max-width: 60; -fx-background-color: #ffffff;">
-                <children>
-                    <Button layoutX="4.0" layoutY="81.0" onAction="#showClinicsList" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: #ffffff; -fx-text-fill: #615CA2;" styleClass="menu-item" text="  Клиники" textAlignment="CENTER" textFill="#615ca2">
-                        <font>
-                            <Font name="Montserrat Medium" size="9.0" />
-                        </font>
-                  <graphic>
-                            <ImageView fitHeight="13.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
-                                <image>
-                                    <Image url="@../assets/clinics_icon.png" />
-                                </image>
-                            </ImageView>
-                  </graphic>
-                    </Button>
-                    <Button layoutX="4.0" layoutY="117.0" onAction="#showProfile" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #ffffff; -fx-text-fill: #615CA2;" styleClass="menu-item" text="  Профиль" textAlignment="RIGHT" textFill="#0a1c40">
-                        <font>
-                            <Font name="Montserrat Medium" size="9.0" />
-                        </font>
-                  <graphic>
-                          <ImageView fitHeight="13.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
-                              <image>
-                                  <Image url="@../assets/profile_icon.png" />
-                              </image>
-                          </ImageView>
-                  </graphic>
-                    </Button>
-                    <Button fx:id="logoutButton" layoutX="17.0" layoutY="163.0" maxHeight="34.0" maxWidth="66.0" onAction="#handleLogout" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #615CA2; -fx-max-width: 60; -fx-max-height: 20;" styleClass="logout-button" text=" Выйти" textAlignment="CENTER">
-                        <font>
-                            <Font name="Montserrat Medium" size="9.0" />
-                        </font>
-                    </Button>
-               <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="30.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../assets/лого.png" />
-                  </image>
-               </ImageView>
-               <Line endX="95.39998626708984" fill="#ede9f7" layoutX="-22.0" layoutY="69.0" opacity="0.34" startX="40.800010681152344" stroke="#615ca2" strokeWidth="0.5" />
-                </children>
+      <AnchorPane prefHeight="682.0" prefWidth="158.0" style="-fx-pref-width: 180;">
+         <children>
+            <AnchorPane layoutX="12.0" prefHeight="684.0" prefWidth="180.0">
+               <children>
+                  <ImageView fitHeight="43.0" fitWidth="46.0" layoutX="86.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/лого.png" />
+                     </image>
+                  </ImageView>
+                     <AnchorPane layoutX="36.0" layoutY="96.0" maxWidth="146.0" prefHeight="588.0" prefWidth="146.0" style="-fx-background-radius: 20; -fx-max-width: 200; -fx-background-color: #ffffff;">
+                     <children>
+                             <Button fx:id="logoutButton" contentDisplay="CENTER" layoutX="24.0" layoutY="158.0" maxHeight="34.0" maxWidth="98.0" onAction="#handleLogout" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #615CA2; -fx-max-width: 100; -fx-max-height: 20; -fx-text-alignment: center;" styleClass="logout-button" text="  Log out" textAlignment="CENTER">
+                                 <font>
+                                     <Font name="Montserrat Medium" size="16.0" />
+                                 </font>
+                             </Button>
+                             <Button layoutX="12.0" layoutY="93.0" onAction="#showProfile" prefHeight="43.0" prefWidth="124.0" style="-fx-background-color: #ffffff; -fx-text-fill: #615CA2;" styleClass="menu-item" text="    Profile" textAlignment="RIGHT" textFill="#0a1c40">
+                                 <font>
+                                     <Font name="Montserrat Medium" size="16.0" />
+                                 </font>
+                           <graphic>
+                                   <ImageView fitHeight="22.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                           <Image url="@../assets/profile_icon.png" />
+                                       </image>
+                                   </ImageView>
+                           </graphic>
+                             </Button>
+                             <Button layoutX="12.0" layoutY="27.0" onAction="#showClinicsList" prefHeight="42.0" prefWidth="124.0" style="-fx-background-color: #ffffff; -fx-text-fill: #615CA2;" styleClass="menu-item" text="    Main" textAlignment="CENTER" textFill="#615ca2">
+                                 <font>
+                                     <Font name="Montserrat Medium" size="16.0" />
+                                 </font>
+                           <graphic>
+                                     <ImageView fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                         <image>
+                                             <Image url="@../assets/clinics_icon.png" />
+                                         </image>
+                                     </ImageView>
+                           </graphic>
+                             </Button>
+                        <Line endX="144.8000030517578" endY="50.49289321899414" fill="#ede9f7" layoutX="-17.0" layoutY="31.0" opacity="0.34" startX="35.9999885559082" startY="50.492897033691406" stroke="#615ca2" strokeWidth="0.5" />
+                     </children>
+                     </AnchorPane>
+               </children>
             </AnchorPane>
-            <Region prefWidth="114.0" VBox.vgrow="ALWAYS" />
-        </VBox>
+         </children>
+      </AnchorPane>
     </left>
 
     <!-- Центральная часть: динамическое содержимое -->

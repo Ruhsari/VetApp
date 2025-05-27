@@ -7,15 +7,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="450.0" prefWidth="660.0" spacing="10" style="-fx-background-color: #ECF1F8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.SpecialistProfileController">
-    <Text fill="#0a1c40" strokeType="OUTSIDE" strokeWidth="0.0" text="Профиль врача">
+<VBox alignment="CENTER" prefHeight="864" prefWidth="1536" spacing="10" style="-fx-background-color: #ECF1F8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.SpecialistProfileController">
+    <Text fill="#0a1c40" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor's Profile">
         <font>
             <Font name="Montserrat SemiBold" size="20.0" />
         </font>
     </Text>
-    <Label fx:id="fullNameLabel" style="-fx-font-family: 'Montserrat'; -fx-font-size: 12px; -fx-text-fill: #516691;" text="ФИО: " />
-    <Label fx:id="specializationLabel" style="-fx-font-family: 'Montserrat'; -fx-font-size: 12px; -fx-text-fill: #516691;" text="Специализация: " />
-    <Label fx:id="clinicLabel" style="-fx-font-family: 'Montserrat'; -fx-font-size: 12px; -fx-text-fill: #516691;" text="Клиника: " />
+    <Label fx:id="fullNameLabel" style="-fx-font-family: 'Montserrat'; -fx-font-size: 12px; -fx-text-fill: #516691;" text="Full name: " />
+    <Label fx:id="specializationLabel" style="-fx-font-family: 'Montserrat'; -fx-font-size: 12px; -fx-text-fill: #516691;" text="Specialization: " />
+    <Label fx:id="clinicLabel" style="-fx-font-family: 'Montserrat'; -fx-font-size: 12px; -fx-text-fill: #516691;" text="Clinic: " />
     <Text fill="#0a1c40" strokeType="OUTSIDE" strokeWidth="0.0" text="Записи">
         <font>
             <Font name="Montserrat SemiBold" size="16.0" />
@@ -24,7 +24,7 @@
     <ScrollPane fitToWidth="true" stylesheets="@styles.css">
         <VBox fx:id="appointmentsContainer" alignment="TOP_CENTER" prefHeight="142.0" prefWidth="645.0" spacing="10" style="-fx-padding: 10; -fx-background-color: #ECF1F8;" stylesheets="@styles.css" />
     </ScrollPane>
-    <Button fx:id="logoutButton" onAction="#handleLogout" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Выйти" textFill="WHITE">
+    <Button fx:id="logoutButton" onAction="#handleLogout" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Exit" textFill="WHITE">
         <font>
             <Font name="Montserrat Medium" size="12.0" />
         </font>

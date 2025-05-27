@@ -8,21 +8,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="450.0" prefWidth="550.0" spacing="10" style="-fx-background-color: #ECF1F8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.SpecialistLoginController">
+<VBox alignment="CENTER" prefHeight="864" prefWidth="1536" spacing="10" style="-fx-background-color: #ECF1F8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.SpecialistLoginController">
     <Text fill="#0a1c40" strokeType="OUTSIDE" strokeWidth="0.0" text="Вход для врачей">
         <font>
             <Font name="Montserrat SemiBold" size="20.0" />
         </font>
     </Text>
-    <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="300.0" promptText="Имя пользователя" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
-    <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="300.0" promptText="Пароль" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
+    <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="300.0" promptText="User name" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
+    <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="300.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
     <Label fx:id="errorLabel" style="-fx-font-family: 'Montserrat'; -fx-font-size: 12px;" textFill="#FF0000" visible="false" />
-    <Button fx:id="loginButton" onAction="#handleLogin" prefHeight="40.0" prefWidth="123.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Войти" textFill="WHITE">
+    <Button fx:id="loginButton" onAction="#handleLogin" prefHeight="40.0" prefWidth="123.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Log in" textFill="WHITE">
         <font>
             <Font name="Montserrat Medium" size="12.0" />
         </font>
     </Button>
-    <Button fx:id="backButton" onAction="#handleBack" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Назад" textFill="WHITE">
+    <Button fx:id="backButton" onAction="#handleBack" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Go back" textFill="WHITE">
         <font>
             <Font name="Montserrat Medium" size="12.0" />
         </font>

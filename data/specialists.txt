@@ -1,5 +1,40 @@
-1,1,Иванов Алексей,Ветеринар-терапевт
-2,2,Смирнова Елена,Ветеринар-хирург
-3,3,Петров Сергей,Стоматолог
-4,4,Козлова Ольга,Хирург
-5,5,Сидоров Дмитрий,Терапевт
+1,1,Alexey Ivanov,Veterinary Therapist
+2,2,Elena Smirnova,Veterinary Surgeon
+3,3,Sergey Petrov,Veterinary Dentist
+4,4,Olga Kozlova,Veterinary Surgeon
+5,5,Dmitry Sidorov,Veterinary Therapist
+6,1,Daulet Ibraimov,Veterinary Therapist
+7,1,Venera Raimova,Veterinary Therapist
+8,1,Said Saidov,Veterinary Therapist
+9,2,Darya Kolesnikova,Veterinary Therapist
+10,2,Natalia Morozova,Veterinary Radiologist
+11,2,James Carter,Veterinary Anesthesiologist
+12,3,Anna Volkova,Veterinary Therapist
+13,3,Michael Brown,Veterinary Ophthalmologist
+14,4,Emily Davis,Veterinary Radiologist
+15,4,Sophia Wilson,Veterinary Therapist
+16,5,David Lee,Veterinary Consultant
+17,5,Laura Martinez,Veterinary Surgeon
+18,6,Robert Taylor,Veterinary Therapist
+19,6,Lisa Anderson,Veterinary Radiologist
+20,7,Mark Johnson,Veterinary Surgeon
+21,7,Emma White,Veterinary Therapist
+22,8,Jessica Harris,Veterinary Dentist
+23,8,Daniel Clark,Veterinary Consultant
+24,9,Chloe Lewis,Veterinary Therapist
+25,9,William Walker,Veterinary Radiologist
+26,10,Grace Thompson,Veterinary Surgeon
+27,10,Oliver Harris,Veterinary Therapist
+28,11,Amelia Young,Veterinary Therapist
+29,11,Henry Allen,Veterinary Dentist
+30,12,Charlotte King,Veterinary Surgeon
+31,12,Thomas Scott,Veterinary Therapist
+32,13,Mia Green,Veterinary Consultant
+33,13,Jacob Wright,Veterinary Surgeon
+34,14,Isabella Adams,Veterinary Therapist
+35,14,Ethan Baker,Veterinary Radiologist
+36,15,Ava Nelson,Veterinary Surgeon
+37,15,Liam Carter,Veterinary Therapist
+38,16,Sophia Mitchell,Veterinary Radiologist
+39,16,Noah Perez,Veterinary Consultant
+40,17,Olivia Roberts,Veterinary Therapist

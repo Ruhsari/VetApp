@@ -13,22 +13,22 @@
         <URL value="@styles.css" />
     </stylesheets>
 
-    <Label styleClass="label-bold" text="Запись на приём" textFill="#0a1c40">
+    <Label styleClass="label-bold" text="Appointment" textFill="#0a1c40">
       <font>
          <Font name="Montserrat Regular" size="12.0" />
       </font></Label>
-    <Label styleClass="label-normal" text="Имя питомца:" />
-    <TextField fx:id="petNameField" prefHeight="35.0" prefWidth="348.0" promptText="Введите имя питомца" style="-fx-background-radius: 10; -fx-background-color: #E5E5E5;" />
-    <Label styleClass="label-normal" text="Тип питомца:" />
-    <TextField fx:id="petTypeField" prefHeight="36.0" prefWidth="348.0" promptText="Например, собака" style="-fx-background-radius: 10; -fx-background-color: #E5E5E5;" />
-    <Label styleClass="label-normal" text="Причина обращения:" />
-    <TextField fx:id="reasonField" prefHeight="35.0" prefWidth="348.0" promptText="Опишите причину" style="-fx-background-radius: 10; -fx-background-color: #E5E5E5;" />
-    <Label styleClass="label-normal" text="Специалист:" />
-    <ComboBox fx:id="specialistComboBox" onAction="#handleSpecialistSelection" prefHeight="35.0" prefWidth="168.0" promptText="Выберите специалиста" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FCC82B;" />
-    <Label styleClass="label-normal" text="Дата:" />
-    <ComboBox fx:id="dateComboBox" onAction="#handleDateSelection" prefHeight="35.0" promptText="Выберите дату" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FCC82B;" />
-    <Label styleClass="label-normal" text="Время:" />
-    <ComboBox fx:id="timeComboBox" prefHeight="35.0" promptText="Выберите время" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FCC82B;" />
-    <Button onAction="#handleSubmit" prefHeight="34.0" prefWidth="116.0" style="-fx-background-color: #FCC82B; -fx-text-fill: #0A1C40;" styleClass="book-button" text="Подтвердить" textFill="#0a1c40" />
+    <Label styleClass="label-normal" text="Pet's Name:" />
+    <TextField fx:id="petNameField" prefHeight="35.0" prefWidth="348.0" promptText="Enter the pet's name" style="-fx-background-radius: 10; -fx-background-color: #E5E5E5;" />
+    <Label styleClass="label-normal" text="Pet type:" />
+    <TextField fx:id="petTypeField" prefHeight="36.0" prefWidth="348.0" promptText="For example, a dog" style="-fx-background-radius: 10; -fx-background-color: #E5E5E5;" />
+    <Label styleClass="label-normal" text="Reason for visit:" />
+    <TextField fx:id="reasonField" prefHeight="35.0" prefWidth="348.0" promptText="Describe the reason" style="-fx-background-radius: 10; -fx-background-color: #E5E5E5;" />
+    <Label styleClass="label-normal" text="Specialist:" />
+    <ComboBox fx:id="specialistComboBox" onAction="#handleSpecialistSelection" prefHeight="35.0" prefWidth="168.0" promptText="Choose a specialist" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FCC82B;" />
+    <Label styleClass="label-normal" text="Date:" />
+    <ComboBox fx:id="dateComboBox" onAction="#handleDateSelection" prefHeight="35.0" promptText="Select a date" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FCC82B;" />
+    <Label styleClass="label-normal" text="Time:" />
+    <ComboBox fx:id="timeComboBox" prefHeight="35.0" promptText="Select time" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FCC82B;" />
+    <Button onAction="#handleSubmit" prefHeight="34.0" prefWidth="116.0" style="-fx-background-color: #FCC82B; -fx-text-fill: #0A1C40;" styleClass="book-button" text="Confirm" textFill="#0a1c40" />
     <Button onAction="#handleCancel" prefHeight="34.0" prefWidth="86.0" style="-fx-background-color: #0A1C40;" styleClass="book-button" text="Отмена" />
 </VBox>

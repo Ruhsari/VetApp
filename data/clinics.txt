@@ -1,5 +1,25 @@
-1,ВетКлиника №1,ул. Центральная,Свердловский,5.0,Вакцинация Стерилизация Чипирование
-2,Айболит,ул. Зеленая,Ленинский,4.2,Вакцинация УЗИ Хирургия
-3,ЗооДоктор,ул. Южная 15,Свердловский,3.2,Стоматология Терапия Лаборатория
-4,ПетКеа,ул. Ленина 5,Чуйский,3.9,Хирургия Рентген Обследование
-5,ВетСевер,ул. Шопокова 20,Первомайский,4.0,Вакцинация Консультация
+1,Ilbirs Vet Clinic,Radishcheva St 12,Pervomaysky,5.0,Vaccination Sterilization Laboratory Chipping Surgery X-ray Ultrasound Osteosynthesis
+2,Vet Home Clinic,Kantemirovskaya St 52,Sverdlovsky,4.2,Vaccination Ultrasound Surgery Consultation Examination Diagnosis
+3,KVS Kyrgyz Vet Service,Moskovskaya St 49,Sverdlovsky,3.2,Dentistry Therapy Laboratory Ultrasound X-ray Inpatient Osteosynthesis Therapy Grooming Ophthalmology
+4,Balu Pet Clinic,Maxim Gorky St 1/3,Oktyabrsky,3.9,Surgery X-ray Examination Chipping Laboratory Sterilization Vaccination Consultation
+5,Chip and Dale Vet Care,Zhibek Zholu St 40,Sverdlovsky,4.0,Vaccination Consultation Examination X-ray Surgery Chipping Laboratory Ultrasound
+6,Pet Wellness Center,Sovetskaya St 30,Leninsky,4.7,Chipping Therapy Ultrasound Vaccination
+7,Noble Paws Clinic,Gagarina St 12,Sverdlovsky,4.3,Sterilization Surgery Vaccination Laboratory
+8,Healthy Pet Hub,Mira St 8,Chuysky,4.1,Laboratory Dentistry Consultation Ultrasound
+9,Guardian Vet Care,Pobedy St 25,Pervomaysky,4.6,X-ray Vaccination Examination Therapy
+10,Pet Harmony Clinic,Gorkogo St 3,Leninsky,4.4,Ultrasound Surgery Chipping Consultation
+11,Furry Friends Vet,Molodezhnaya St 7,Sverdlovsky,3.8,Therapy Dentistry Vaccination X-ray
+12,Animal Haven Clinic,Frunze St 18,Chuysky,4.5,Sterilization X-ray Laboratory Ultrasound
+13,Pet Pal Clinic,Chuyskaya St 22,Pervomaysky,4.2,Consultation Ultrasound Surgery Vaccination
+14,Caring Paws Vet,Oktyabrskaya St 9,Leninsky,4.0,Vaccination Chipping Therapy Examination
+15,Vet Serenity Clinic,Panfilova St 14,Sverdlovsky,4.9,Surgery Dentistry Examination Laboratory
+16,Pet Vitality Center,Moskovskaya St 11,Chuysky,4.3,X-ray Vaccination Consultation Therapy
+17,Animal Care Masters,Toktogula St 6,Pervomaysky,4.1,Ultrasound Sterilization Laboratory Vaccination
+18,Pet Pulse Clinic,Abaya St 19,Leninsky,4.6,Chipping Therapy Surgery Ultrasound
+19,Rainbow Vet Care,Ibraimova St 4,Sverdlovsky,4.4,Dentistry X-ray Vaccination Consultation
+20,Animal Health Hub,Kievskaya St 13,Chuysky,4.0,Consultation Ultrasound Sterilization X-ray
+21,Bright Paws Clinic,Baytik Baatyra St 8,Pervomaysky,4.7,Surgery Laboratory Chipping Therapy
+22,Pet Guardian Vet,Akhunbaeva St 17,Leninsky,4.2,Vaccination Therapy Examination Ultrasound
+23,Compassionate Care Vet,Almatinskaya St 2,Sverdlovsky,4.5,X-ray Dentistry Consultation Laboratory
+24,Pet Life Clinic,Zhukeeva-Pudovkina St 21,Chuysky,4.3,Ultrasound Surgery Vaccination Chipping
+25,Trusted Vet Partners,Tabyshalieva St 16,Pervomaysky,4.8,Chipping Sterilization Laboratory Therapy

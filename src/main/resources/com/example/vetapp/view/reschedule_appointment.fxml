@@ -9,15 +9,15 @@
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
-    <Label text="Перенос записи" styleClass="label-bold" />
+    <Label text="Rescheduling an appointment" styleClass="label-bold" />
     <Label fx:id="petNameLabel" styleClass="label-normal" />
     <Label fx:id="petTypeLabel" styleClass="label-normal" />
     <Label fx:id="specialistLabel" styleClass="label-normal" />
     <Label fx:id="reasonLabel" styleClass="label-normal" />
-    <Label text="Новая дата:" styleClass="label-normal" />
-    <ComboBox fx:id="dateComboBox" promptText="Выберите дату" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #C5D9FF;" onAction="#handleDateSelection" />
-    <Label text="Новое время:" styleClass="label-normal" />
-    <ComboBox fx:id="timeComboBox" promptText="Выберите время" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #C5D9FF;" />
-    <Button onAction="#handleSubmit" styleClass="book-button" text="Подтвердить" />
-    <Button onAction="#handleCancel" styleClass="book-button" text="Отмена" />
+    <Label text="New date:" styleClass="label-normal" />
+    <ComboBox fx:id="dateComboBox" promptText="Select a date" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #C5D9FF;" onAction="#handleDateSelection" />
+    <Label text="New time:" styleClass="label-normal" />
+    <ComboBox fx:id="timeComboBox" promptText="Select a time" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #C5D9FF;" />
+    <Button onAction="#handleSubmit" styleClass="book-button" text="Confirm" />
+    <Button onAction="#handleCancel" styleClass="book-button" text="Cancel" />
 </VBox>

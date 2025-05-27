@@ -1,6 +1,8 @@
 package com.example.vetapp.controller;
 
 import com.example.vetapp.model.Clinic;
+import com.example.vetapp.model.Specialist;
+import com.example.vetapp.service.FileDataService;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,8 +15,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.example.vetapp.service.FileDataService;
-
 public class ClinicsListController {
     @FXML private TextField searchField;
     @FXML private ComboBox<String> filterComboBox;
@@ -23,6 +23,7 @@ public class ClinicsListController {
 
     private List<Clinic> clinics;
     private List<Clinic> allClinics;
+    private List<Specialist> allSpecialists;
     private ClientMainController parentController;
 
     public void setParentController(ClientMainController parentController) {
@@ -38,19 +39,21 @@ public class ClinicsListController {
         if (clinicsContainer == null) System.err.println("clinicsContainer is null");
 
         if (filterComboBox != null) {
-            filterComboBox.setItems(FXCollections.observableArrayList("Все", "По рейтингу", "По расстоянию"));
+            filterComboBox.setItems(FXCollections.observableArrayList("All", "by rating", "by distance"));
         }
         if (locationComboBox != null) {
-            locationComboBox.setItems(FXCollections.observableArrayList("Все", "Свердловский", "Ленинский", "Чуйский", "Первомайский"));
+            locationComboBox.setItems(FXCollections.observableArrayList("All", "Sverdlovsky", "Leninsky", "Chuysky", "Pervomaysky", "Oktyabrsky"));
         }
 
         try {
             allClinics = FileDataService.loadClinics();
+            allSpecialists = FileDataService.loadSpecialists();
             System.out.println("Клиники загружены: " + allClinics.size() + " элементов");
+            System.out.println("Специалисты загружены: " + allSpecialists.size() + " элементов");
             clinics = allClinics;
             updateClinicsList();
         } catch (IOException e) {
-            System.err.println("Ошибка загрузки клиник: " + e.getMessage());
+            System.err.println("Ошибка загрузки данных: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -58,29 +61,35 @@ public class ClinicsListController {
     @FXML
     private void handleSearch() {
         System.out.println("Обработка поиска...");
-        String searchText = searchField.getText() != null ? searchField.getText().toLowerCase() : "";
-        String filter = filterComboBox.getValue() != null ? filterComboBox.getValue() : "Все";
-        String location = locationComboBox.getValue() != null ? locationComboBox.getValue() : "Все";
+        String searchText = searchField.getText() != null ? searchField.getText().toLowerCase().trim() : "";
+        String filter = filterComboBox.getValue() != null ? filterComboBox.getValue() : "All";
+        String location = locationComboBox.getValue() != null ? locationComboBox.getValue() : "All";
         System.out.println("Поиск: " + searchText + ", Фильтр: " + filter + ", Район: " + location);
 
         clinics = allClinics.stream()
+                // Фильтр по району
+                .filter(clinic -> location.equals("All") || clinic.getDistrict().equalsIgnoreCase(location))
+                // Фильтр по текстовому поиску
                 .filter(clinic -> {
-                    boolean matchesSearch = searchText.isEmpty() ||
-                            clinic.getName().toLowerCase().contains(searchText) ||
-                            String.join(" ", clinic.getServices()).toLowerCase().contains(searchText);
-                    boolean matchesLocation = location.equals("Все") ||
-                            clinic.getDistrict().equalsIgnoreCase(location);
-                    return matchesSearch && matchesLocation;
-                })
-                .sorted((clinic1, clinic2) -> {
-                    if (filter.equals("Все")) {
-                        return 0;
-                    } else if (filter.equals("По рейтингу")) {
-                        return Double.compare(clinic2.getRating(), clinic1.getRating());
-                    } else if (filter.equals("По расстоянию")) {
-                        return 0;
+                    if (searchText.isEmpty()) {
+                        return true;
                     }
-                    return 0;
+                    boolean matchesName = clinic.getName().toLowerCase().contains(searchText);
+                    boolean matchesService = clinic.getServices().stream()
+                            .anyMatch(service -> service.toLowerCase().contains(searchText));
+                    boolean matchesSpecialist = allSpecialists.stream()
+                            .filter(spec -> spec.getClinicId().equals(String.valueOf(clinic.getId())))
+                            .anyMatch(spec -> spec.getName().toLowerCase().contains(searchText));
+                    return matchesName || matchesService || matchesSpecialist;
+                })
+                // Сортировка
+                .sorted((clinic1, clinic2) -> {
+                    if (filter.equals("by rating")) {
+                        return Double.compare(clinic2.getRating(), clinic1.getRating());
+                    } else if (filter.equals("by distance")) {
+                        return 0; // Не реализовано
+                    }
+                    return 0; // All
                 })
                 .collect(Collectors.toList());
 

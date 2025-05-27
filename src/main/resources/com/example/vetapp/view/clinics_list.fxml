@@ -5,28 +5,51 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<VBox prefHeight="660.0" prefWidth="660.0" spacing="10" style="-fx-padding: 20; -fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ClinicsListController">
+<AnchorPane minWidth="1395.0" prefHeight="864.0" prefWidth="1395.0" style="-fx-min-height: 864; -fx-background-color: #EDE9F7; -fx-min-width: 1 356;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ClinicsListController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
-    <!-- Панель поиска и фильтров -->
-    <HBox alignment="center" spacing="10" style="-fx-background-color: #EDE9F7;">
-        <TextField fx:id="searchField" promptText="Search clinics or services" style="-fx-pref-width: 300px; -fx-background-radius: 20px; -fx-background-color: #ffffff; -fx-padding: 10px;" />
-        <ComboBox fx:id="filterComboBox" promptText="Filter" style="-fx-pref-width: 100px; -fx-background-radius: 20; -fx-background-color: #FCC82B; -fx-padding: 5px;" />
-        <ComboBox fx:id="locationComboBox" promptText="District" style="-fx-pref-width: 100px; -fx-background-radius: 20; -fx-background-color: #FCC82B; -fx-padding: 5px;" />
-        <Button onAction="#handleSearch" prefHeight="27.0" prefWidth="87.0" style="-fx-padding: 5px 15px; -fx-background-radius: 20; -fx-background-color: #615CA2; -fx-text-fill: white;" text="Search" textFill="WHITE">
-            <font>
-                <Font name="Montserrat Regular" size="9.0" />
-            </font>
-        </Button>
-    </HBox>
+    <children>
 
-    <!-- Контейнер для списка клиник -->
-    <ScrollPane fitToWidth="true" prefHeight="584.0" prefWidth="620.0">
-        <VBox fx:id="clinicsContainer" prefHeight="573.0" prefWidth="605.0" spacing="10" />
-    </ScrollPane>
-</VBox>
+        <!-- Контейнер для списка клиник -->
+        <ScrollPane fitToWidth="true" layoutX="115.0" layoutY="170.0" prefHeight="658.0" prefWidth="1089.0" style="-fx-background-color: #EDE9F7;">
+            <content>
+                <VBox fx:id="clinicsContainer" prefWidth="1026.0" spacing="10" style="-fx-background-color: #EDE9F7;" />
+            </content>
+        </ScrollPane>
+          <Button layoutX="859.0" layoutY="43.0" onAction="#handleSearch" prefHeight="35.0" prefWidth="128.0" style="-fx-padding: 5px 15px; -fx-background-radius: 20; -fx-background-color: #615CA2; -fx-text-fill: white;" text="Search" textFill="WHITE">
+              <font>
+                  <Font name="Montserrat Medium" size="14.0" />
+              </font>
+          </Button>
+          <ComboBox fx:id="locationComboBox" layoutX="716.0" layoutY="36.0" prefHeight="44.0" prefWidth="118.0" promptText="District" style="-fx-pref-width: 120px; -fx-background-radius: 25; -fx-background-color: #FCC82B; -fx-padding: 5px;" />
+          <TextField fx:id="searchField" layoutX="121.0" layoutY="31.0" prefHeight="57.0" prefWidth="329.0" promptText="    Search clinics, services, or specialists" style="-fx-pref-width: 400px; -fx-pref-height: 50; -fx-background-radius: 2250px; -fx-background-color: #ffffff; -fx-padding: 10px;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+          <ComboBox fx:id="filterComboBox" layoutX="573.0" layoutY="34.0" prefHeight="44.0" prefWidth="119.0" promptText="Filter" style="-fx-pref-width: 120px; -fx-background-radius: 25; -fx-background-color: #FCC82B; -fx-padding: 5px;" />
+      <Pane layoutX="474.0" layoutY="31.0" prefHeight="53.0" prefWidth="74.0" style="-fx-pref-height: 50; -fx-background-color: #ffffff; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="16.0" fitWidth="15.0" layoutX="26.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/loop.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text fill="#615ca2" layoutX="118.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main page">
+         <font>
+            <Font name="Montserrat Medium" size="30.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

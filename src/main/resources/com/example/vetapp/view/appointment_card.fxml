@@ -16,7 +16,7 @@
     <Label fx:id="dateTimeLabel" styleClass="label-normal" />
     <Label fx:id="reasonLabel" styleClass="label-normal" />
     <HBox spacing="10">
-        <Button fx:id="rescheduleButton" onAction="#handleReschedule" prefHeight="33.0" prefWidth="130.0" styleClass="book-button" text="Перенести запись" />
-        <Button fx:id="deleteButton" onAction="#handleDelete" prefHeight="33.0" prefWidth="114.0" styleClass="book-button" text="Удалить запись" />
+        <Button fx:id="rescheduleButton" onAction="#handleReschedule" prefHeight="33.0" prefWidth="130.0" styleClass="book-button" text="Reschedule your appointment" />
+        <Button fx:id="deleteButton" onAction="#handleDelete" prefHeight="33.0" prefWidth="114.0" styleClass="book-button" text="Delete appointment " />
     </HBox>
 </VBox>

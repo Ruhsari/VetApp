@@ -6,10 +6,12 @@ import com.example.vetapp.model.User;
 import com.example.vetapp.service.FileDataService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.scene.control.Alert;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 import java.io.IOException;
 import java.util.List;
@@ -19,7 +21,7 @@ public class ClinicDetailsController {
     @FXML private Label addressLabel;
     @FXML private Label districtLabel;
     @FXML private Label ratingLabel;
-    @FXML private Label servicesLabel;
+    @FXML private TextFlow servicesTextFlow;
     @FXML private VBox specialistsContainer;
 
     private Clinic clinic;
@@ -53,7 +55,19 @@ public class ClinicDetailsController {
         addressLabel.setText(clinic.getAddress());
         districtLabel.setText(clinic.getDistrict());
         ratingLabel.setText(String.format("%.1f", clinic.getRating()));
-        servicesLabel.setText(String.join(", ", clinic.getServices()));
+
+        // Форматирование услуг с буллетами
+        servicesTextFlow.getChildren().clear();
+        if (clinic.getServices() != null && !clinic.getServices().isEmpty()) {
+            for (String service : clinic.getServices()) {
+                Text bullet = new Text("• ");
+                Text serviceText = new Text(service + "\n");
+                servicesTextFlow.getChildren().addAll(bullet, serviceText);
+            }
+        } else {
+            servicesTextFlow.getChildren().add(new Text("Услуги не указаны"));
+        }
+
         loadSpecialists();
     }
 

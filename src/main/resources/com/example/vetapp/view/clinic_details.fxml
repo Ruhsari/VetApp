@@ -5,24 +5,45 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
-<VBox spacing="10" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ClinicDetailsController">
+<VBox spacing="15" style="-fx-padding: 50; -fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ClinicDetailsController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
 
-    <Label fx:id="nameLabel" styleClass="label-bold" />
-    <Label fx:id="addressLabel" styleClass="label-normal" />
-    <Label fx:id="districtLabel" styleClass="label-normal" />
-    <Label fx:id="ratingLabel" styleClass="label-normal" />
-    <Label fx:id="servicesLabel" styleClass="label-normal" wrapText="true" />
-    <VBox fx:id="specialistsContainer" spacing="5" />
-    <Button fx:id="backButton" onAction="#handleBack" style="-fx-background-color: #0A1C40;" styleClass="book-button" text="Назад">
+    <Label fx:id="nameLabel" styleClass="label-medium" textFill="#0a1c40">
       <font>
-         <Font name="Montserrat Regular" size="12.0" />
-      </font></Button>
-    <Button fx:id="bookButton" onAction="#handleBookAppointment" style="-fx-background-color: #0A1C40;" styleClass="book-button" text="Записаться">
+         <Font name="Poppins Medium" size="24.0" />
+      </font></Label>
+    <Label fx:id="addressLabel" styleClass="label-regular" textFill="#0a1c40">
       <font>
-         <Font name="Montserrat Regular" size="12.0" />
-      </font></Button>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label fx:id="districtLabel" styleClass="label-regular" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label fx:id="ratingLabel" styleClass="label-regular" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <TextFlow fx:id="servicesTextFlow" styleClass="label-normal" />
+    <Text fill="#615ca2" style="-fx-fill: #615CA2;" text="Specialists">
+        <font>
+            <Font name="Poppins Medium" size="18.0" />
+        </font>
+    </Text>
+    <VBox fx:id="specialistsContainer" spacing="5" style="-fx-padding: 10;" />
+    <Button fx:id="backButton" onAction="#handleBack" prefHeight="37.0" prefWidth="80.0" style="-fx-background-color: #615CA2; -fx-background-radius: 25;" styleClass="book-button" text="Go back">
+        <font>
+            <Font name="Montserrat Regular" size="12.0" />
+        </font>
+    </Button>
+    <Button fx:id="bookButton" onAction="#handleBookAppointment" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: #FCC82B; -fx-background-radius: 25;" styleClass="book-button" text="Make an appointment">
+        <font>
+            <Font name="Montserrat Regular" size="12.0" />
+        </font>
+    </Button>
 </VBox>

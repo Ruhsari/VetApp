@@ -24,8 +24,8 @@ public class ClinicCardController {
 
     private void updateDisplay() {
         if (nameLabel != null) nameLabel.setText(clinic.getName());
-        if (addressLabel != null) addressLabel.setText("Адрес: " + clinic.getAddress());
-        if (ratingLabel != null) ratingLabel.setText("Рейтинг: " + clinic.getRating());
-        if (servicesLabel != null) servicesLabel.setText("Услуги: " + clinic.getServices());
+        if (addressLabel != null) addressLabel.setText("Address: " + clinic.getAddress());
+        if (ratingLabel != null) ratingLabel.setText("Rating: " + clinic.getRating());
+        if (servicesLabel != null) servicesLabel.setText("Services: " + clinic.getServices());
     }
 }
