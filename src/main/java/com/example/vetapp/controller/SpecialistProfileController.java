@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -20,7 +21,8 @@ public class SpecialistProfileController {
     @FXML private Label fullNameLabel;
     @FXML private Label specializationLabel;
     @FXML private Label clinicLabel;
-    @FXML private VBox appointmentsContainer;
+    @FXML private AnchorPane appointmentsContainer;
+    @FXML private VBox appointmentsVBox;
 
     private Specialist specialist;
 
@@ -37,6 +39,9 @@ public class SpecialistProfileController {
         if (appointmentsContainer == null) {
             System.err.println("Ошибка: appointmentsContainer не инициализирован");
         }
+        if (appointmentsVBox == null) {
+            System.err.println("Ошибка: appointmentsVBox не инициализирован");
+        }
     }
 
     private void updateSpecialistDisplay() {
@@ -44,24 +49,28 @@ public class SpecialistProfileController {
             System.err.println("specialist is null");
             return;
         }
-        fullNameLabel.setText("ФИО: " + (specialist.getName() != null ? specialist.getName() : "Не указано"));
-        specializationLabel.setText("Специализация: " + (specialist.getSpecialization() != null ? specialist.getSpecialization() : "Не указано"));
+        fullNameLabel.setText("Full name: " + (specialist.getName() != null ? specialist.getName() : "Не указано"));
+        specializationLabel.setText("Specialization: " + (specialist.getSpecialization() != null ? specialist.getSpecialization() : "Не указано"));
         try {
             List<Clinic> clinics = FileDataService.loadClinics();
             Clinic clinic = clinics.stream()
                     .filter(c -> c.getId().equals(specialist.getClinicId()))
                     .findFirst()
                     .orElse(null);
-            clinicLabel.setText("Клиника: " + (clinic != null ? clinic.getName() : "Не указано"));
+            clinicLabel.setText("Clinic: " + (clinic != null ? clinic.getName() : "Не указано"));
         } catch (IOException e) {
-            System.err.println("Ошибка загрузки clinics.txt: " + e.getMessage());
+            
             clinicLabel.setText("Клиника: Не указано");
         }
     }
 
     private void loadAppointments() {
         System.out.println("Загрузка записей для врача: " + (specialist != null ? specialist.getName() : "null"));
-        appointmentsContainer.getChildren().clear();
+        if (appointmentsVBox == null) {
+            System.err.println("appointmentsVBox не инициализирован!");
+            return;
+        }
+        appointmentsVBox.getChildren().clear();
         try {
             List<Appointment> appointments = FileDataService.loadAppointments()
                     .stream()
@@ -71,7 +80,7 @@ public class SpecialistProfileController {
             for (Appointment appointment : appointments) {
                 VBox card = createAppointmentCard(appointment);
                 if (card != null) {
-                    appointmentsContainer.getChildren().add(card);
+                    appointmentsVBox.getChildren().add(card);
                     System.out.println("Добавлена карточка записи: " + appointment.getPetName());
                 } else {
                     System.err.println("Не удалось создать карточку для записи: " + appointment.getPetName());

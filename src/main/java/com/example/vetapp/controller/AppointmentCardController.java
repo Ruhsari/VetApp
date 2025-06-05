@@ -31,11 +31,11 @@ public class AppointmentCardController {
     }
 
     private void updateCard() {
-        petNameLabel.setText("Питомец: " + appointment.getPetName());
-        petTypeLabel.setText("Тип: " + appointment.getPetType());
-        specialistLabel.setText("Специалист: ID " + appointment.getSpecialistId());
-        dateTimeLabel.setText("Дата и время: " + appointment.getDate() + " " + appointment.getTime());
-        reasonLabel.setText("Причина: " + appointment.getReason());
+        petNameLabel.setText("Pet name: " + appointment.getPetName());
+        petTypeLabel.setText("Type: " + appointment.getPetType());
+        specialistLabel.setText("Specialist: ID " + appointment.getSpecialistId());
+        dateTimeLabel.setText("Date and time: " + appointment.getDate() + " " + appointment.getTime());
+        reasonLabel.setText("Visit reason: " + appointment.getReason());
     }
 
     @FXML
@@ -55,9 +55,9 @@ public class AppointmentCardController {
         }
 
         Alert confirmation = new Alert(Alert.AlertType.CONFIRMATION);
-        confirmation.setTitle("Подтверждение удаления");
+        confirmation.setTitle("Confirm deletion");
         confirmation.setHeaderText(null);
-        confirmation.setContentText("Вы уверены, что хотите удалить запись для " + appointment.getPetName() + " на " + appointment.getDate() + " " + appointment.getTime() + "?");
+        confirmation.setContentText("Are you sure you want to delete " + appointment.getPetName() + " appointment for " + appointment.getDate() + " " + appointment.getTime() + "?");
         Optional<ButtonType> result = confirmation.showAndWait();
 
         if (result.isPresent() && result.get() == ButtonType.OK) {
@@ -68,15 +68,15 @@ public class AppointmentCardController {
                 FileDataService.addSchedule(new Schedule(appointment.getSpecialistId(), appointment.getDate(), appointment.getTime()));
                 // Обновляем профиль
                 parentController.refreshAppointments();
-                showAlert("Успех", "Запись успешно удалена!");
+                showAlert("Success", "Appointment successfully deleted!");
             } catch (IOException e) {
-                showAlert("Ошибка", "Ошибка при удалении записи: " + e.getMessage());
+                showAlert("Error", "Error deleting appointment: " + e.getMessage());
             }
         }
     }
 
     private void showAlert(String title, String message) {
-        Alert alert = new Alert(message.contains("Ошибка") ? Alert.AlertType.ERROR : Alert.AlertType.INFORMATION);
+        Alert alert = new Alert(message.contains("Error") ? Alert.AlertType.ERROR : Alert.AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);

@@ -10,6 +10,7 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.util.StringConverter;
 
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class AppointmentFormController {
+    @FXML private Label clinicNameLabel;
     @FXML private TextField petNameField;
     @FXML private TextField petTypeField;
     @FXML private ComboBox<String> dateComboBox;
@@ -35,6 +37,9 @@ public class AppointmentFormController {
 
     public void setClinic(Clinic clinic) {
         this.clinic = clinic;
+        if (clinicNameLabel != null) {
+            clinicNameLabel.setText(clinic.getName());
+        }
         loadSpecialists();
     }
 
@@ -58,7 +63,6 @@ public class AppointmentFormController {
 
     @FXML
     private void initialize() {
-        // Настраиваем ComboBox для отображения специалистов
         specialistComboBox.setConverter(new StringConverter<Specialist>() {
             @Override
             public String toString(Specialist specialist) {
@@ -71,7 +75,6 @@ public class AppointmentFormController {
             }
         });
 
-        // Настраиваем ComboBox для отображения дат
         dateComboBox.setConverter(new StringConverter<String>() {
             @Override
             public String toString(String date) {
@@ -177,6 +180,11 @@ public class AppointmentFormController {
         String time = timeComboBox.getValue();
         Specialist selectedSpecialist = specialistComboBox.getValue();
         String reason = reasonField.getText().trim();
+
+        if (user == null) {
+            showAlert("Ошибка", "Пользователь не авторизован!");
+            return;
+        }
 
         if (petName.isEmpty() || petType.isEmpty() || date == null || time == null ||
                 selectedSpecialist == null || reason.isEmpty()) {

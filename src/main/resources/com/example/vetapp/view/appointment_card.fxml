@@ -5,18 +5,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox spacing="5" style="-fx-padding: 10; -fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.AppointmentCardController">
+<VBox prefHeight="170.0" prefWidth="421.0" spacing="10" style="-fx-padding: 20; -fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.AppointmentCardController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
-    <Label fx:id="petNameLabel" styleClass="label-bold" />
-    <Label fx:id="petTypeLabel" styleClass="label-normal" />
-    <Label fx:id="specialistLabel" styleClass="label-normal" />
-    <Label fx:id="dateTimeLabel" styleClass="label-normal" />
-    <Label fx:id="reasonLabel" styleClass="label-normal" />
+    <Label fx:id="petNameLabel" styleClass="label-bold" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label fx:id="petTypeLabel" styleClass="label-normal" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label fx:id="specialistLabel" styleClass="label-normal" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label fx:id="dateTimeLabel" styleClass="label-normal" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label fx:id="reasonLabel" styleClass="label-normal" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
     <HBox spacing="10">
-        <Button fx:id="rescheduleButton" onAction="#handleReschedule" prefHeight="33.0" prefWidth="130.0" styleClass="book-button" text="Reschedule your appointment" />
-        <Button fx:id="deleteButton" onAction="#handleDelete" prefHeight="33.0" prefWidth="114.0" styleClass="book-button" text="Delete appointment " />
+        <Button fx:id="rescheduleButton" onAction="#handleReschedule" prefHeight="34.0" prefWidth="104.0" style="-fx-background-color: #615CA2;" styleClass="book-button" text="Reschedule" />
+        <Button fx:id="deleteButton" onAction="#handleDelete" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: #FCC82B;" styleClass="book-button" text="Delete" />
     </HBox>
 </VBox>

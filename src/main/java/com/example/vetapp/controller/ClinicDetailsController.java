@@ -8,10 +8,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 
 import java.io.IOException;
 import java.util.List;
@@ -21,7 +21,7 @@ public class ClinicDetailsController {
     @FXML private Label addressLabel;
     @FXML private Label districtLabel;
     @FXML private Label ratingLabel;
-    @FXML private TextFlow servicesTextFlow;
+    @FXML private HBox servicesContainer;
     @FXML private VBox specialistsContainer;
 
     private Clinic clinic;
@@ -52,20 +52,24 @@ public class ClinicDetailsController {
             return;
         }
         nameLabel.setText(clinic.getName());
-        addressLabel.setText(clinic.getAddress());
-        districtLabel.setText(clinic.getDistrict());
-        ratingLabel.setText(String.format("%.1f", clinic.getRating()));
+        addressLabel.setText("Address: " + clinic.getAddress());
+        districtLabel.setText("District: " + clinic.getDistrict());
+        ratingLabel.setText("Rating: " + String.format("%.1f", clinic.getRating()));
 
-        // Форматирование услуг с буллетами
-        servicesTextFlow.getChildren().clear();
+        // Populate services as styled labels
+        servicesContainer.getChildren().clear();
         if (clinic.getServices() != null && !clinic.getServices().isEmpty()) {
             for (String service : clinic.getServices()) {
-                Text bullet = new Text("• ");
-                Text serviceText = new Text(service + "\n");
-                servicesTextFlow.getChildren().addAll(bullet, serviceText);
+                Label serviceLabel = new Label(service);
+                serviceLabel.setStyle("-fx-background-color: #FDD96B; -fx-background-radius: 10; -fx-padding: 5 10 5 10; -fx-text-fill: #0a1c40;");
+                serviceLabel.setFont(new javafx.scene.text.Font("Poppins Medium", 14));
+                servicesContainer.getChildren().add(serviceLabel);
             }
         } else {
-            servicesTextFlow.getChildren().add(new Text("Услуги не указаны"));
+            Label noServicesLabel = new Label("Услуги не указаны");
+            noServicesLabel.setStyle("-fx-text-fill: #0a1c40;");
+            noServicesLabel.setFont(new javafx.scene.text.Font("Poppins Medium", 14));
+            servicesContainer.getChildren().add(noServicesLabel);
         }
 
         loadSpecialists();

@@ -70,20 +70,20 @@ public class RescheduleAppointmentController {
     }
 
     private void updateDetails() {
-        petNameLabel.setText("Питомец: " + appointment.getPetName());
-        petTypeLabel.setText("Тип: " + appointment.getPetType());
+        petNameLabel.setText("Pet name: " + appointment.getPetName());
+        petTypeLabel.setText("Type: " + appointment.getPetType());
         try {
             List<Specialist> specialists = FileDataService.loadSpecialistsByClinicId(appointment.getClinicId());
             Specialist specialist = specialists.stream()
                     .filter(s -> s.getId().equals(appointment.getSpecialistId()))
                     .findFirst()
                     .orElse(null);
-            specialistLabel.setText("Специалист: " + (specialist != null ? specialist.getName() + " (" + specialist.getSpecialization() + ")" : "ID " + appointment.getSpecialistId()));
+            specialistLabel.setText("Specialist: " + (specialist != null ? specialist.getName() + " (" + specialist.getSpecialization() + ")" : "ID " + appointment.getSpecialistId()));
         } catch (IOException e) {
-            specialistLabel.setText("Специалист: ID " + appointment.getSpecialistId());
+            specialistLabel.setText("Specialist: ID " + appointment.getSpecialistId());
             System.err.println("Ошибка при загрузке специалиста: " + e.getMessage());
         }
-        reasonLabel.setText("Причина: " + appointment.getReason());
+        reasonLabel.setText("Visit reason: " + appointment.getReason());
     }
 
     private void loadAvailableDates() {
@@ -99,10 +99,10 @@ public class RescheduleAppointmentController {
             dateComboBox.setItems(FXCollections.observableArrayList(availableDates));
             System.out.println("Загружено дат для специалиста " + appointment.getSpecialistId() + ": " + availableDates.size());
             if (availableDates.isEmpty()) {
-                showAlert("Информация", "Нет доступных дат для этого специалиста.");
+                showAlert("Information", "There are no available dates for this specialist..");
             }
         } catch (IOException e) {
-            showAlert("Ошибка", "Не удалось загрузить расписание: " + e.getMessage());
+            showAlert("Error", "Unable to load schedule: " + e.getMessage());
         }
     }
 
@@ -124,10 +124,10 @@ public class RescheduleAppointmentController {
             System.out.println("Загружено времени для специалиста " + appointment.getSpecialistId() +
                     " на дату " + selectedDate + ": " + availableTimes.size());
             if (availableTimes.isEmpty()) {
-                showAlert("Информация", "Нет доступного времени на выбранную дату.");
+                showAlert("Information", "There is no time available for the selected date.");
             }
         } catch (IOException e) {
-            showAlert("Ошибка", "Не удалось загрузить расписание: " + e.getMessage());
+            showAlert("Error", "Unable to load schedule: " + e.getMessage());
         }
     }
 
@@ -136,7 +136,7 @@ public class RescheduleAppointmentController {
         String newDate = dateComboBox.getValue();
         String newTime = timeComboBox.getValue();
         if (newDate == null || newTime == null) {
-            showAlert("Ошибка", "Выберите дату и время!");
+            showAlert("Error", "Выберите дату и время!");
             return;
         }
         try {
@@ -156,10 +156,10 @@ public class RescheduleAppointmentController {
                     appointment.getReason()
             );
             FileDataService.saveAppointment(newAppointment);
-            showAlert("Успех", "Запись успешно перенесена!");
+            showAlert("Success", "Appointment successfully rescheduled!");
             parentController.showProfile();
         } catch (IOException e) {
-            showAlert("Ошибка", "Ошибка при переносе записи: " + e.getMessage());
+            showAlert("Error", "Error when transferring an appointment: " + e.getMessage());
         }
     }
 

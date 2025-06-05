@@ -4,27 +4,29 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="864" prefWidth="1536" spacing="10" style="-fx-background-color: #ECF1F8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.SpecialistLoginController">
-    <Text fill="#0a1c40" strokeType="OUTSIDE" strokeWidth="0.0" text="Вход для врачей">
-        <font>
-            <Font name="Montserrat SemiBold" size="20.0" />
-        </font>
-    </Text>
-    <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="300.0" promptText="User name" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
-    <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="300.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
-    <Label fx:id="errorLabel" style="-fx-font-family: 'Montserrat'; -fx-font-size: 12px;" textFill="#FF0000" visible="false" />
-    <Button fx:id="loginButton" onAction="#handleLogin" prefHeight="40.0" prefWidth="123.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Log in" textFill="WHITE">
-        <font>
-            <Font name="Montserrat Medium" size="12.0" />
-        </font>
-    </Button>
-    <Button fx:id="backButton" onAction="#handleBack" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #0A1C40; -fx-background-radius: 50;" text="Go back" textFill="WHITE">
-        <font>
-            <Font name="Montserrat Medium" size="12.0" />
-        </font>
-    </Button>
-</VBox>
+<AnchorPane prefHeight="846.0" prefWidth="1536.0" style="-fx-background-color: #615CA2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.SpecialistLoginController">
+   <children>
+       <Text fill="WHITE" layoutX="696.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in as a doctor">
+           <font>
+               <Font name="Montserrat SemiBold" size="20.0" />
+           </font>
+       </Text>
+       <TextField fx:id="usernameField" layoutX="642.0" layoutY="367.0" prefHeight="40.0" prefWidth="300.0" promptText="     User name" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
+       <PasswordField fx:id="passwordField" layoutX="641.0" layoutY="427.0" prefHeight="40.0" prefWidth="300.0" promptText="    Password" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
+       <Label fx:id="errorLabel" layoutX="200.0" layoutY="52.0" prefHeight="15.0" prefWidth="127.0" style="-fx-font-family: 'Montserrat'; -fx-font-size: 12px;" textFill="#FF0000" visible="false" />
+       <Button fx:id="loginButton" layoutX="657.0" layoutY="503.0" onAction="#handleLogin" prefHeight="40.0" prefWidth="123.0" style="-fx-background-color: #FCC82B; -fx-background-radius: 50;" text="Log in" textFill="WHITE">
+           <font>
+               <Font name="Montserrat Medium" size="12.0" />
+           </font>
+       </Button>
+       <Button fx:id="backButton" layoutX="829.0" layoutY="503.0" onAction="#handleBack" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #3E3E3E; -fx-background-radius: 50;" text="Go back" textFill="WHITE">
+           <font>
+               <Font name="Montserrat Medium" size="12.0" />
+           </font>
+       </Button>
+   </children>
+</AnchorPane>

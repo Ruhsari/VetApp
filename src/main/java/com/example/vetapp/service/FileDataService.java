@@ -199,7 +199,7 @@ public class FileDataService {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",", -1);
                 if (parts.length == 3 && parts[0].trim().equals(username) && parts[1].trim().equals(password)) {
-                    return parts[2].trim(); // Возвращаем fullName
+                    return parts[2].trim();
                 }
             }
         }

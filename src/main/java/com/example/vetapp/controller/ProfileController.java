@@ -30,11 +30,11 @@ public class ProfileController {
             return;
         }
 
-        if (usernameLabel != null) usernameLabel.setText("Имя пользователя: " + user.getUsername());
-        if (fullNameLabel != null) fullNameLabel.setText("Полное имя: " + user.getFullName());
-        if (phoneLabel != null) phoneLabel.setText("Телефон: " + user.getPhone());
-        if (addressLabel != null) addressLabel.setText("Адрес: " + user.getAddress());
-        if (statusLabel != null) statusLabel.setText("Статус: " + user.getRole());
+        if (usernameLabel != null) usernameLabel.setText("User name: " + user.getUsername());
+        if (fullNameLabel != null) fullNameLabel.setText("Your full name: " + user.getFullName());
+        if (phoneLabel != null) phoneLabel.setText("Phone number: " + user.getPhone());
+        if (addressLabel != null) addressLabel.setText("Address: " + user.getAddress());
+        if (statusLabel != null) statusLabel.setText("Status: " + user.getRole());
 
         refreshAppointments();
     }
@@ -58,7 +58,7 @@ public class ProfileController {
         try {
             List<Appointment> appointments = FileDataService.loadAppointmentsByUsername(user.getUsername());
             if (appointments.isEmpty()) {
-                Label noAppointmentsLabel = new Label("Нет активных записей");
+                Label noAppointmentsLabel = new Label("No active appoinments");
                 noAppointmentsLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #666;");
                 appointmentsContainer.getChildren().add(noAppointmentsLabel);
                 return;

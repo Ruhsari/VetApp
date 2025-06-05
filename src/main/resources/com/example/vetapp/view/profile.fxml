@@ -6,24 +6,39 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="538.0" prefWidth="586.0" spacing="10" style="-fx-padding: 40; -fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ProfileController">
+<VBox prefHeight="538.0" prefWidth="586.0" spacing="15" style="-fx-padding: 50; -fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ProfileController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
-    <Label text="Profile" textFill="#0a1c40">
+    <Label text="Profile" textFill="#615ca2">
       <font>
          <Font name="Poppins Medium" size="24.0" />
       </font></Label>
-    <Label fx:id="usernameLabel" styleClass="label-normal" />
-    <Label fx:id="fullNameLabel" styleClass="label-normal" />
-    <Label fx:id="phoneLabel" styleClass="label-normal" />
-    <Label fx:id="addressLabel" styleClass="label-normal" />
-    <Label fx:id="statusLabel" styleClass="label-normal" />
-    <Label text="My appointments" textFill="#0a1c40">
+    <Label fx:id="usernameLabel" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label fx:id="fullNameLabel" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label fx:id="phoneLabel" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label fx:id="addressLabel" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label fx:id="statusLabel" textFill="#0a1c40">
+      <font>
+         <Font name="Poppins Regular" size="14.0" />
+      </font></Label>
+    <Label text="My appointments" textFill="#615ca2">
       <font>
          <Font name="Poppins Medium" size="24.0" />
       </font></Label>
-    <ScrollPane fitToWidth="true" style="-fx-background-color: #EDE9F7;">
-        <VBox fx:id="appointmentsContainer" prefHeight="21.0" prefWidth="545.0" spacing="10" style="-fx-padding: 10; -fx-background-color: #EDE9F7;" />
+    <ScrollPane fitToWidth="true" prefHeight="239.0" prefWidth="506.0" style="-fx-background-color: #EDE9F7;">
+        <VBox fx:id="appointmentsContainer" prefHeight="231.0" prefWidth="491.0" spacing="10" style="-fx-padding: 10; -fx-background-color: #EDE9F7;" />
     </ScrollPane>
 </VBox>
