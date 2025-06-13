@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="482.0" prefWidth="523.0" spacing="15" style="-fx-padding: 50; -fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.RescheduleAppointmentController">
+<VBox prefHeight="593.0" prefWidth="588.0" spacing="15" style="-fx-padding: 50; -fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.RescheduleAppointmentController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
@@ -35,12 +35,12 @@
       <font>
          <Font name="Poppins Regular" size="14.0" />
       </font></Label>
-    <ComboBox fx:id="dateComboBox" onAction="#handleDateSelection" prefHeight="35.0" promptText="Select a date" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FDD96B;" />
+    <ComboBox fx:id="dateComboBox" onAction="#handleDateSelection" prefHeight="35.0" prefWidth="239.0" promptText="Select a date" style="-fx-pref-width: 250px; -fx-background-radius: 20; -fx-background-color: #FDD96B;" />
     <Label text="New time:" textFill="#0a1c40">
       <font>
          <Font name="Poppins Regular" size="14.0" />
       </font></Label>
-    <ComboBox fx:id="timeComboBox" prefHeight="35.0" promptText="Select a time" style="-fx-pref-width: 200px; -fx-background-radius: 20; -fx-background-color: #FDD96B;" />
+    <ComboBox fx:id="timeComboBox" prefHeight="35.0" promptText="Select a time" style="-fx-pref-width: 250px; -fx-background-radius: 20; -fx-background-color: #FDD96B;" />
     <Button onAction="#handleSubmit" prefHeight="40.0" prefWidth="102.0" style="-fx-background-color: #FCC82B;" styleClass="book-button" text="Confirm" />
     <Button onAction="#handleCancel" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #615ca2;" styleClass="book-button" text="Cancel" />
 </VBox>

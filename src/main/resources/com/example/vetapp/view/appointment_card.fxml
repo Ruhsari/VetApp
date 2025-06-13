@@ -7,32 +7,49 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="170.0" prefWidth="421.0" spacing="10" style="-fx-padding: 20; -fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.AppointmentCardController">
+<VBox prefHeight="237.0" prefWidth="543.0" spacing="10" style="-fx-padding: 20; -fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.AppointmentCardController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
-    <Label fx:id="petNameLabel" styleClass="label-bold" textFill="#0a1c40">
-      <font>
-         <Font name="Poppins Regular" size="14.0" />
-      </font></Label>
-    <Label fx:id="petTypeLabel" styleClass="label-normal" textFill="#0a1c40">
-      <font>
-         <Font name="Poppins Regular" size="14.0" />
-      </font></Label>
-    <Label fx:id="specialistLabel" styleClass="label-normal" textFill="#0a1c40">
-      <font>
-         <Font name="Poppins Regular" size="14.0" />
-      </font></Label>
-    <Label fx:id="dateTimeLabel" styleClass="label-normal" textFill="#0a1c40">
-      <font>
-         <Font name="Poppins Regular" size="14.0" />
-      </font></Label>
-    <Label fx:id="reasonLabel" styleClass="label-normal" textFill="#0a1c40">
-      <font>
-         <Font name="Poppins Regular" size="14.0" />
-      </font></Label>
-    <HBox spacing="10">
-        <Button fx:id="rescheduleButton" onAction="#handleReschedule" prefHeight="34.0" prefWidth="104.0" style="-fx-background-color: #615CA2;" styleClass="book-button" text="Reschedule" />
-        <Button fx:id="deleteButton" onAction="#handleDelete" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: #FCC82B;" styleClass="book-button" text="Delete" />
-    </HBox>
+    <children>
+        <Label fx:id="petNameLabel" textFill="#0a1c40">
+            <font>
+                <Font name="Poppins Medium" size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="petTypeLabel" textFill="#0a1c40">
+            <font>
+                <Font name="Poppins Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="specialistLabel" textFill="#0a1c40">
+            <font>
+                <Font name="Poppins Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="dateTimeLabel" textFill="#0a1c40">
+            <font>
+                <Font name="Poppins Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="reasonLabel" textFill="#0a1c40">
+            <font>
+                <Font name="Poppins Regular" size="14.0" />
+            </font>
+        </Label>
+        <HBox prefHeight="54.0" prefWidth="380.0" spacing="10">
+            <children>
+                <Button fx:id="rescheduleButton" onAction="#handleReschedule" prefHeight="36.0" prefWidth="118.0" style="-fx-background-color: #615CA2; -fx-text-fill: #FFFFFF;" styleClass="book-button" text="Reschedule">
+                    <font>
+                        <Font name="Poppins Regular" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="deleteButton" onAction="#handleDelete" prefHeight="36.0" prefWidth="83.0" style="-fx-background-color: #FCC82B; -fx-text-fill: #0A1C40;" styleClass="book-button" text="Delete">
+                    <font>
+                        <Font name="Poppins Regular" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+    </children>
 </VBox>

@@ -32,16 +32,16 @@
                 <Font name="Poppins Medium" size="16.0" />
             </font>
         </Text>
-        <Button fx:id="logoutButton" layoutX="424.0" layoutY="643.0" onAction="#handleLogout" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #FCC82B; -fx-background-radius: 50;" text="Exit" textFill="WHITE">
+        <Button fx:id="logoutButton" layoutX="423.0" layoutY="684.0" onAction="#handleLogout" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #FCC82B; -fx-background-radius: 50;" text="Exit" textFill="WHITE">
             <font>
                 <Font name="Montserrat Medium" size="12.0" />
             </font>
         </Button>
-        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="424.0" layoutY="318.0" prefHeight="306.0" prefWidth="843.0" stylesheets="@styles.css" vbarPolicy="NEVER">
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="424.0" layoutY="318.0" prefHeight="341.0" prefWidth="843.0" stylesheets="@styles.css" vbarPolicy="NEVER">
             <content>
-                <AnchorPane fx:id="appointmentsContainer" minHeight="0.0" minWidth="0.0" prefWidth="672.0">
+                <AnchorPane fx:id="appointmentsContainer" minHeight="0.0" minWidth="0.0" prefWidth="672.0" style="-fx-background-color: #EDE9F7;">
                     <children>
-                        <VBox fx:id="appointmentsVBox" prefHeight="303.0" prefWidth="841.0" spacing="10" style="-fx-padding: 10;">
+                        <VBox fx:id="appointmentsVBox" prefHeight="342.0" prefWidth="842.0" spacing="10" style="-fx-padding: 10; -fx-background-color: #EDE9F7;">
                             <!-- Карточки записей будут добавляться сюда -->
                         </VBox>
                     </children>

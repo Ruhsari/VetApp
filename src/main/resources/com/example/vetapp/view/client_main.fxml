@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <BorderPane style="-fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ClientMainController">
     <stylesheets>
@@ -21,11 +22,6 @@
          <children>
             <AnchorPane layoutX="12.0" prefHeight="684.0" prefWidth="180.0">
                <children>
-                  <ImageView fitHeight="43.0" fitWidth="46.0" layoutX="86.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/лого.png" />
-                     </image>
-                  </ImageView>
                      <AnchorPane layoutX="36.0" layoutY="96.0" maxWidth="146.0" prefHeight="588.0" prefWidth="146.0" style="-fx-background-radius: 20; -fx-max-width: 200; -fx-background-color: #ffffff;">
                      <children>
                              <Button fx:id="logoutButton" contentDisplay="CENTER" layoutX="24.0" layoutY="158.0" maxHeight="34.0" maxWidth="98.0" onAction="#handleLogout" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #615CA2; -fx-max-width: 100; -fx-max-height: 20; -fx-text-alignment: center;" styleClass="logout-button" text="  Log out" textAlignment="CENTER">
@@ -60,6 +56,11 @@
                         <Line endX="144.8000030517578" endY="50.49289321899414" fill="#ede9f7" layoutX="-17.0" layoutY="31.0" opacity="0.34" startX="35.9999885559082" startY="50.492897033691406" stroke="#615ca2" strokeWidth="0.5" />
                      </children>
                      </AnchorPane>
+                  <Text fill="#3e3e3e" layoutX="66.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VetApp">
+                     <font>
+                        <Font name="Poppins SemiBold" size="24.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </children>

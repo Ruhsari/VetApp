@@ -46,15 +46,15 @@ public class FileDataService {
             System.out.println("Строка " + (lines.indexOf(line) + 1) + ": " + line + " | Частей: " + parts.length);
             if (parts.length == 6) {
                 String username = parts[0].trim();
-                String password = parts[1].trim();
-                String role = parts[2].trim();
-                String fullName = parts[3].trim();
-                String phone = parts[4].trim();
-                String address = parts[5].trim();
+                String fullName = parts[1].trim();
+                String phone = parts[2].trim();
+                String address = parts[3].trim();
+                String password = parts[4].trim();
+                String role = parts[5].trim();
                 if (role.equalsIgnoreCase("client")) {
-                    Client client = new Client(username, password, fullName, phone, address);
-                    users.add(client);
-                    System.out.println("Успешно загружен пользователь: " + client);
+                    User user = new User(username, fullName, phone, address, password);
+                    users.add(user);
+                    System.out.println("Успешно загружен пользователь: " + user);
                 } else {
                     System.err.println("Роль '" + role + "' не поддерживается для клиента: " + line);
                 }
@@ -71,11 +71,12 @@ public class FileDataService {
         List<String> lines = Files.readAllLines(Paths.get(SPECIALISTS_FILE));
         for (String line : lines) {
             String[] parts = line.split(",", -1);
-            if (parts.length == 4) {
+            if (parts.length >= 4) {
                 String id = parts[0].trim();
                 String clinicId = parts[1].trim();
                 String name = parts[2].trim();
                 String specialization = parts[3].trim();
+                String avatarPath = parts.length > 4 ? parts[4].trim() : "";
                 specialists.add(new Specialist(id, clinicId, name, specialization));
             }
         }

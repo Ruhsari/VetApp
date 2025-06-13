@@ -3,57 +3,61 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="726.0" prefWidth="899.0" style="-fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ClinicDetailsController">
+<VBox prefHeight="846.0" prefWidth="959.0" spacing="15" style="-fx-background-color: #EDE9F7; -fx-padding: 0 0 0 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ClinicDetailsController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
     <children>
-        <Label fx:id="ratingLabel" layoutX="371.2" layoutY="49.0" prefHeight="35.0" prefWidth="207.0" styleClass="label-regular" textFill="#0a1c40" AnchorPane.leftAnchor="371.2" AnchorPane.topAnchor="49.0">
+        <Label fx:id="nameLabel" styleClass="label-medium" textFill="#615ca2">
+            <font>
+                <Font name="Poppins Medium" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="addressLabel" styleClass="label-regular" textFill="#0a1c40">
             <font>
                 <Font name="Poppins Regular" size="14.0" />
             </font>
         </Label>
-        <VBox layoutY="8.0" prefHeight="738.0" prefWidth="899.0" spacing="15" style="-fx-padding: 50;" AnchorPane.bottomAnchor="-20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+        <Label fx:id="districtLabel" styleClass="label-regular" textFill="#0a1c40">
+            <font>
+                <Font name="Poppins Regular" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="ratingLabel" styleClass="label-regular" textFill="#0a1c40">
+            <font>
+                <Font name="Poppins Regular" size="14.0" />
+            </font>
+        </Label>
+        <HBox fx:id="servicesContainer" spacing="10" style="-fx-padding: 5 0 5 0;" />
+        <Text fill="#615ca2" text="Specialists" wrappingWidth="200">
+            <font>
+                <Font name="Poppins Medium" size="18.0" />
+            </font>
+        </Text>
+        <ScrollPane fx:id="specialistsScrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="400.0" prefWidth="905.0" style="-fx-background-color: #EDE9F7;" vbarPolicy="NEVER">
+            <content>
+                <VBox fx:id="specialistsContainer" prefWidth="905.0" spacing="15" style="-fx-padding: 15 15 15 0; -fx-background-color: #EDE9F7;" />
+            </content>
+        </ScrollPane>
+        <HBox spacing="10">
             <children>
-                <Label fx:id="nameLabel" styleClass="label-medium" textFill="#615ca2">
-                    <font>
-                        <Font name="Poppins Medium" size="24.0" />
-                    </font>
-                </Label>
-                <Label fx:id="addressLabel" styleClass="label-regular" textFill="#0a1c40">
-                    <font>
-                        <Font name="Poppins Regular" size="14.0" />
-                    </font>
-                </Label>
-                <Label fx:id="districtLabel" styleClass="label-regular" textFill="#0a1c40">
-                    <font>
-                        <Font name="Poppins Regular" size="14.0" />
-                    </font>
-                </Label>
-                <HBox fx:id="servicesContainer" spacing="10" style="-fx-padding: 5;" />
-                <Text fill="#615ca2" style="-fx-fill: #615CA2;" text="Specialists">
-                    <font>
-                        <Font name="Poppins Medium" size="18.0" />
-                    </font>
-                </Text>
-                <VBox fx:id="specialistsContainer" prefHeight="226.0" prefWidth="798.0" spacing="15" style="-fx-padding: 10;" />
-                <Button fx:id="backButton" onAction="#handleBack" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #615CA2; -fx-background-radius: 20;" text="Go back" textFill="WHITE">
+                <Button fx:id="backButton" onAction="#handleBack" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #615CA2; -fx-background-radius: 20; -fx-text-fill: #FFFFFF;" text="Back">
                     <font>
                         <Font name="Poppins Regular" size="12.0" />
                     </font>
                 </Button>
-                <Button fx:id="bookButton" onAction="#handleBookAppointment" prefHeight="44.0" prefWidth="195.0" style="-fx-background-color: #FCC200; -fx-background-radius: 25;" styleClass="Bold" text="Make an Appointment" textFill="WHITE">
+                <Button fx:id="bookButton" onAction="#handleBookAppointment" prefHeight="40.0" prefWidth="195.0" style="-fx-background-color: #FCC200; -fx-background-radius: 20; -fx-text-fill: #0A1C40;" styleClass="bold-button" text="Make an appointment">
                     <font>
-                        <Font name="Poppins Regular" size="12.0" />
+                        <Font name="Poppins Medium" size="12.0" />
                     </font>
                 </Button>
             </children>
-        </VBox>
+        </HBox>
     </children>
-</AnchorPane>
+</VBox>

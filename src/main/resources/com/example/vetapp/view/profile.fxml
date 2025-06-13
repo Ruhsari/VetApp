@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="538.0" prefWidth="586.0" spacing="15" style="-fx-padding: 50; -fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ProfileController">
+<VBox prefHeight="910.0" prefWidth="904.0" spacing="15" style="-fx-padding: 50; -fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ProfileController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
@@ -38,7 +38,7 @@
       <font>
          <Font name="Poppins Medium" size="24.0" />
       </font></Label>
-    <ScrollPane fitToWidth="true" prefHeight="239.0" prefWidth="506.0" style="-fx-background-color: #EDE9F7;">
-        <VBox fx:id="appointmentsContainer" prefHeight="231.0" prefWidth="491.0" spacing="10" style="-fx-padding: 10; -fx-background-color: #EDE9F7;" />
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="543.0" prefWidth="803.0" style="-fx-background-color: #EDE9F7;" vbarPolicy="NEVER">
+        <VBox fx:id="appointmentsContainer" prefHeight="537.0" prefWidth="802.0" spacing="10" style="-fx-padding: 10; -fx-background-color: #EDE9F7;" />
     </ScrollPane>
 </VBox>

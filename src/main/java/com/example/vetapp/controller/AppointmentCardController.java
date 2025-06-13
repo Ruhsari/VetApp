@@ -2,6 +2,7 @@ package com.example.vetapp.controller;
 
 import com.example.vetapp.model.Appointment;
 import com.example.vetapp.model.Schedule;
+import com.example.vetapp.model.Specialist;
 import com.example.vetapp.service.FileDataService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -9,6 +10,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 
 public class AppointmentCardController {
@@ -33,7 +35,21 @@ public class AppointmentCardController {
     private void updateCard() {
         petNameLabel.setText("Pet name: " + appointment.getPetName());
         petTypeLabel.setText("Type: " + appointment.getPetType());
-        specialistLabel.setText("Specialist: ID " + appointment.getSpecialistId());
+
+        // Загружаем имя специалиста по specialistId
+        String specialistName = "Неизвестный специалист";
+        try {
+            List<Specialist> specialists = FileDataService.loadSpecialists();
+            specialistName = specialists.stream()
+                    .filter(s -> s.getId().equals(appointment.getSpecialistId()))
+                    .findFirst()
+                    .map(Specialist::getName)
+                    .orElse("Специалист не найден (ID: " + appointment.getSpecialistId() + ")");
+        } catch (IOException e) {
+            System.err.println("Ошибка загрузки специалистов: " + e.getMessage());
+        }
+        specialistLabel.setText("Specialist: " + specialistName);
+
         dateTimeLabel.setText("Date and time: " + appointment.getDate() + " " + appointment.getTime());
         reasonLabel.setText("Visit reason: " + appointment.getReason());
     }

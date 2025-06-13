@@ -63,7 +63,7 @@ public class ClientMainController {
     @FXML
     private void handleLogout() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/vetapp/view/login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/vetapp/view/auth.fxml"));
             Parent loginRoot = loader.load();
             Stage stage = (Stage) contentPane.getScene().getWindow();
             stage.setScene(new Scene(loginRoot));

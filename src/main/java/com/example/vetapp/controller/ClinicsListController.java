@@ -2,12 +2,14 @@ package com.example.vetapp.controller;
 
 import com.example.vetapp.model.Clinic;
 import com.example.vetapp.model.Specialist;
+import com.example.vetapp.model.User;
 import com.example.vetapp.service.FileDataService;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
@@ -20,6 +22,8 @@ public class ClinicsListController {
     @FXML private ComboBox<String> filterComboBox;
     @FXML private ComboBox<String> locationComboBox;
     @FXML private VBox clinicsContainer;
+    @FXML private Label userNameLabel;
+    @FXML private Label userStatusLabel;
 
     private List<Clinic> clinics;
     private List<Clinic> allClinics;
@@ -37,6 +41,8 @@ public class ClinicsListController {
         if (locationComboBox == null) System.err.println("locationComboBox is null");
         if (searchField == null) System.err.println("searchField is null");
         if (clinicsContainer == null) System.err.println("clinicsContainer is null");
+        if (userNameLabel == null) System.err.println("userNameLabel is null");
+        if (userStatusLabel == null) System.err.println("userStatusLabel is null");
 
         if (filterComboBox != null) {
             filterComboBox.setItems(FXCollections.observableArrayList("All", "by rating", "by distance"));
@@ -67,9 +73,7 @@ public class ClinicsListController {
         System.out.println("Поиск: " + searchText + ", Фильтр: " + filter + ", Район: " + location);
 
         clinics = allClinics.stream()
-                // Фильтр по району
                 .filter(clinic -> location.equals("All") || clinic.getDistrict().equalsIgnoreCase(location))
-                // Фильтр по текстовому поиску
                 .filter(clinic -> {
                     if (searchText.isEmpty()) {
                         return true;
@@ -82,14 +86,13 @@ public class ClinicsListController {
                             .anyMatch(spec -> spec.getName().toLowerCase().contains(searchText));
                     return matchesName || matchesService || matchesSpecialist;
                 })
-                // Сортировка
                 .sorted((clinic1, clinic2) -> {
                     if (filter.equals("by rating")) {
                         return Double.compare(clinic2.getRating(), clinic1.getRating());
                     } else if (filter.equals("by distance")) {
-                        return 0; // Не реализовано
+                        return 0;
                     }
-                    return 0; // All
+                    return 0;
                 })
                 .collect(Collectors.toList());
 
