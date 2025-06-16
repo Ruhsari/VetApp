@@ -12,9 +12,9 @@
         <URL value="@styles.css" />
     </stylesheets>
     <children>
-        <HBox alignment="CENTER_LEFT" spacing="20">
+        <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="720.0" spacing="20">
             <children>
-                <VBox spacing="5" prefWidth="500.0">
+                <VBox prefWidth="500.0" spacing="5">
                     <children>
                         <Label fx:id="nameLabel" styleClass="label-medium" textFill="#0A1C40">
                             <font>
@@ -28,7 +28,7 @@
                         </Label>
                     </children>
                 </VBox>
-                <Button fx:id="bookButton" onAction="#handleBook" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #FCC200; -fx-background-radius: 20; -fx-text-fill: #0A1C40;" styleClass="book-button" text="Book">
+                <Button fx:id="bookButton" onAction="#handleBook" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #604AD0; -fx-background-radius: 20; -fx-text-fill: #ffffff;" styleClass="book-button" text="Book">
                     <font>
                         <Font name="Poppins Medium" size="12.0" />
                     </font>

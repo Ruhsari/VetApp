@@ -6,39 +6,39 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="910.0" prefWidth="904.0" spacing="15" style="-fx-padding: 50; -fx-background-color: #EDE9F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ProfileController">
+<VBox prefHeight="910.0" prefWidth="1247.0" spacing="15" style="-fx-padding: 50; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ProfileController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
-    <Label text="Profile" textFill="#615ca2">
-      <font>
-         <Font name="Poppins Medium" size="24.0" />
-      </font></Label>
+    <Label text="Profile" textFill="#2e255d">
+        <font>
+            <Font name="Poppins Medium" size="24.0" />
+        </font></Label>
     <Label fx:id="usernameLabel" textFill="#0a1c40">
-      <font>
-         <Font name="Poppins Regular" size="14.0" />
-      </font></Label>
+        <font>
+            <Font name="Poppins Regular" size="14.0" />
+        </font></Label>
     <Label fx:id="fullNameLabel" textFill="#0a1c40">
-      <font>
-         <Font name="Poppins Regular" size="14.0" />
-      </font></Label>
+        <font>
+            <Font name="Poppins Regular" size="14.0" />
+        </font></Label>
     <Label fx:id="phoneLabel" textFill="#0a1c40">
-      <font>
-         <Font name="Poppins Regular" size="14.0" />
-      </font></Label>
+        <font>
+            <Font name="Poppins Regular" size="14.0" />
+        </font></Label>
     <Label fx:id="addressLabel" textFill="#0a1c40">
-      <font>
-         <Font name="Poppins Regular" size="14.0" />
-      </font></Label>
+        <font>
+            <Font name="Poppins Regular" size="14.0" />
+        </font></Label>
     <Label fx:id="statusLabel" textFill="#0a1c40">
-      <font>
-         <Font name="Poppins Regular" size="14.0" />
-      </font></Label>
-    <Label text="My appointments" textFill="#615ca2">
-      <font>
-         <Font name="Poppins Medium" size="24.0" />
-      </font></Label>
-    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="543.0" prefWidth="803.0" style="-fx-background-color: #EDE9F7;" vbarPolicy="NEVER">
-        <VBox fx:id="appointmentsContainer" prefHeight="537.0" prefWidth="802.0" spacing="10" style="-fx-padding: 10; -fx-background-color: #EDE9F7;" />
+        <font>
+            <Font name="Poppins Regular" size="14.0" />
+        </font></Label>
+    <Label text="My appointments" textFill="#2e255d">
+        <font>
+            <Font name="Poppins Medium" size="24.0" />
+        </font></Label>
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="533.0" prefWidth="1317.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER">
+        <VBox fx:id="appointmentsContainer" prefHeight="538.0" prefWidth="1334.0" spacing="10" style="-fx-padding: 10; -fx-background-color: #ffffff;" />
     </ScrollPane>
 </VBox>

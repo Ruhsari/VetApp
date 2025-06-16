@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="846.0" prefWidth="959.0" spacing="15" style="-fx-background-color: #EDE9F7; -fx-padding: 0 0 0 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ClinicDetailsController">
+<VBox prefHeight="846.0" prefWidth="1279.0" spacing="15" style="-fx-background-color: #ffffff; -fx-padding: 50 0 0 50;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.ClinicDetailsController">
     <stylesheets>
         <URL value="@styles.css" />
     </stylesheets>
@@ -35,24 +35,24 @@
             </font>
         </Label>
         <HBox fx:id="servicesContainer" spacing="10" style="-fx-padding: 5 0 5 0;" />
-        <Text fill="#615ca2" text="Specialists" wrappingWidth="200">
+        <Text fill="#2e255d" text="Specialists" wrappingWidth="200">
             <font>
                 <Font name="Poppins Medium" size="18.0" />
             </font>
         </Text>
-        <ScrollPane fx:id="specialistsScrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="400.0" prefWidth="905.0" style="-fx-background-color: #EDE9F7;" vbarPolicy="NEVER">
+        <ScrollPane fx:id="specialistsScrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="400.0" prefWidth="1126.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER">
             <content>
-                <VBox fx:id="specialistsContainer" prefWidth="905.0" spacing="15" style="-fx-padding: 15 15 15 0; -fx-background-color: #EDE9F7;" />
+                <VBox fx:id="specialistsContainer" prefHeight="402.0" prefWidth="925.0" spacing="15" style="-fx-padding: 15 15 15 0; -fx-background-color: #ffffff;" />
             </content>
         </ScrollPane>
         <HBox spacing="10">
             <children>
-                <Button fx:id="backButton" onAction="#handleBack" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #615CA2; -fx-background-radius: 20; -fx-text-fill: #FFFFFF;" text="Back">
+                <Button fx:id="backButton" onAction="#handleBack" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #5DC983; -fx-background-radius: 20; -fx-text-fill: #FFFFFF;" text="Back">
                     <font>
                         <Font name="Poppins Regular" size="12.0" />
                     </font>
                 </Button>
-                <Button fx:id="bookButton" onAction="#handleBookAppointment" prefHeight="40.0" prefWidth="195.0" style="-fx-background-color: #FCC200; -fx-background-radius: 20; -fx-text-fill: #0A1C40;" styleClass="bold-button" text="Make an appointment">
+                <Button fx:id="bookButton" onAction="#handleBookAppointment" prefHeight="40.0" prefWidth="195.0" style="-fx-background-color: #604AD0; -fx-background-radius: 20; -fx-text-fill: #ffffff;" styleClass="bold-button" text="Make an appointment" textFill="WHITE">
                     <font>
                         <Font name="Poppins Medium" size="12.0" />
                     </font>

@@ -11,3 +11,4 @@ Ruhsari,11,client,Ruhsari Bulatova,+996555706014,A-1, 16
 Ruhsari,6363,client,Ruhsari Bulatova,+996555706014,A-1,16,3
 rr,rr,client,rr,rr,rr
 Ruhsari,6363,client,Ruhsari Bulatova,+996555706014,A-1
+Shah,99,client,Shah,99,9

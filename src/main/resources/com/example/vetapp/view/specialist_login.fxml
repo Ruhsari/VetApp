@@ -10,17 +10,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="846.0" prefWidth="1536.0" style="-fx-background-color: #615CA2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.SpecialistLoginController">
+<AnchorPane prefHeight="846.0" prefWidth="1536.0" style="-fx-background-color: #5DC983;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetapp.controller.SpecialistLoginController">
    <children>
-       <Text fill="WHITE" layoutX="681.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in as a doctor">
+       <Text fill="WHITE" layoutX="664.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in as a doctor">
            <font>
-               <Font name="Montserrat SemiBold" size="20.0" />
+               <Font name="Poppins SemiBold" size="24.0" />
            </font>
        </Text>
        <TextField fx:id="usernameField" layoutX="627.0" layoutY="367.0" prefHeight="40.0" prefWidth="300.0" promptText="     User name" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
        <PasswordField fx:id="passwordField" layoutX="626.0" layoutY="427.0" prefHeight="40.0" prefWidth="300.0" promptText="    Password" style="-fx-background-color: #ffffff; -fx-max-width: 300; -fx-background-radius: 30;" />
        <Label fx:id="errorLabel" layoutX="200.0" layoutY="52.0" prefHeight="15.0" prefWidth="127.0" style="-fx-font-family: 'Montserrat'; -fx-font-size: 12px;" textFill="#FF0000" visible="false" />
-       <Button fx:id="loginButton" layoutX="628.0" layoutY="503.0" onAction="#handleLogin" prefHeight="40.0" prefWidth="123.0" style="-fx-background-color: #FCC82B; -fx-background-radius: 50;" text="Log in" textFill="WHITE">
+       <Button fx:id="loginButton" layoutX="628.0" layoutY="503.0" onAction="#handleLogin" prefHeight="40.0" prefWidth="123.0" style="-fx-background-color: #604AD0; -fx-background-radius: 50;" text="Log in" textFill="WHITE">
            <font>
                <Font name="Montserrat Medium" size="14.0" />
            </font>
@@ -35,9 +35,9 @@
             <Image url="@../assets/dog_auth.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="647.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to VetApp">
+      <Text fill="WHITE" layoutX="589.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to VetApp">
          <font>
-            <Font name="Montserrat SemiBold" size="24.0" />
+            <Font name="Poppins SemiBold" size="36.0" />
          </font>
       </Text>
    </children>
